@@ -1,0 +1,15 @@
+{
+  "name": "grayskull-deployments",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/gatewayapps/grayskull-deployments",
+  "author": "Daniel Gary <daniel@gatewayapps.com>",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "@octokit/rest": "^16.35.0",
+    "fs-extra": "^8.1.0",
+    "glob": "^7.1.6",
+    "now": "^16.6.3"
+  }
+}
