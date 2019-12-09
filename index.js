@@ -14,18 +14,18 @@ async function downloadLatestRelease() {
     repo: "grayskull"
   });
 
-  // if (fs.existsSync("./grayskull")) {
-  //   console.log("Removing previous Grayskull download");
-  //   fs.removeSync("./grayskull");
-  // }
+  if (fs.existsSync("./grayskull")) {
+    console.log("Removing previous Grayskull download");
+    fs.removeSync("./grayskull");
+  }
 
-  // console.log("Downloading latest release of Grayskull");
-  // cp.execSync(
-  //   `git clone --branch ${latest.data.tag_name} https://github.com/gatewayapps/grayskull`,
-  //   { stdio: "inherit" }
-  // );
+  console.log("Downloading latest release of Grayskull");
+  cp.execSync(
+    `git clone --branch ${latest.data.tag_name} https://github.com/gatewayapps/grayskull`,
+    { stdio: "inherit" }
+  );
 
-  // cp.execSync(`rm ./grayskull/yarn.lock`, { stdio: "inherit" });
+  cp.execSync(`rm ./grayskull/yarn.lock`, { stdio: "inherit" });
 
   fileNames.forEach(fileName => {
     console.log(`Deploying for ${fileName}`);
